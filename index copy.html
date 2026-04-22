@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XEON NEON - أساطير الكرة</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        xeon: {
+                            bg: '#000000',
+                            card: '#0a0a0a',
+                            cyan: '#00f3ff',
+                            lime: '#bcff00',
+                            magenta: '#ff00ff',
+                            red: '#ff003c',
+                            silver: '#e2e8f0'
+                        }
+                    },
+                    boxShadow: {
+                        'neon-cyan': '0 0 10px #00f3ff, 0 0 20px #00f3ff',
+                        'neon-lime': '0 0 10px #bcff00, 0 0 20px #bcff00',
+                        'neon-magenta': '0 0 10px #ff00ff, 0 0 20px #ff00ff',
+                        'neon-red': '0 0 10px #ff003c, 0 0 20px #ff003c',
+                        'neon-white': '0 0 10px #ffffff, 0 0 20px #ffffff',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap');
+        body { font-family: 'Cairo', sans-serif; background-color: #000; color: #fff; }
+        
+        .neon-border { border: 2px solid; transition: all 0.3s ease; }
+        .hidden-card { display: none; }
+        
+        /* تأثير النيون على النصوص */
+        .text-glow-cyan { text-shadow: 0 0 8px #00f3ff; }
+        .text-glow-lime { text-shadow: 0 0 8px #bcff00; }
+        
+        .fade-in { animation: fadeIn 0.6s ease-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="p-4 md:p-10">
+
+    <div class="max-w-3xl mx-auto">
+        <header class="text-center mb-12">
+            <h1 class="text-5xl md:text-7xl font-black text-xeon-cyan text-glow-cyan tracking-tighter mb-2">XEON UI</h1>
+            <p class="text-xeon-silver tracking-[0.3em] font-bold text-xs md:text-sm">FOOTBALL LEGENDS DATABASE</p>
+        </header>
+
+        <div class="flex flex-col gap-4 mb-16">
+            <button onclick="openCard('r9')" class="neon-border border-xeon-lime text-xeon-lime hover:bg-xeon-lime hover:text-black font-black py-4 rounded-lg shadow-neon-lime transition-all text-xl uppercase">1_ظاهرة رونالدو</button>
+            <button onclick="openCard('z5')" class="neon-border border-xeon-cyan text-xeon-cyan hover:bg-xeon-cyan hover:text-black font-black py-4 rounded-lg shadow-neon-cyan transition-all text-xl uppercase">2_زين دين زيدان</button>
+            <button onclick="openCard('cr7')" class="neon-border border-xeon-red text-xeon-red hover:bg-xeon-red hover:text-black font-black py-4 rounded-lg shadow-neon-red transition-all text-xl uppercase">3_كرستيانو رونالدو</button>
+            <button onclick="openCard('njr')" class="neon-border border-xeon-magenta text-xeon-magenta hover:bg-xeon-magenta hover:text-black font-black py-4 rounded-lg shadow-neon-magenta transition-all text-xl uppercase">4_نيمار</button>
+            <button onclick="openCard('t10')" class="neon-border border-xeon-silver text-xeon-silver hover:bg-xeon-silver hover:text-black font-black py-4 rounded-lg shadow-neon-white transition-all text-xl uppercase">5_ابو تريكه</button>
+        </div>
+
+        <div id="content-area">
+
+            <div id="r9" class="hidden-card fade-in bg-xeon-card border-2 border-xeon-lime p-6 md:p-10 rounded-2xl">
+                <h2 class="text-4xl font-black text-xeon-lime mb-6 underline decoration-double">Ronaldo nazario</h2>
+                <div class="space-y-6 text-lg leading-relaxed text-gray-200">
+                    <section>
+                        <h3 class="text-xeon-lime font-bold text-2xl mb-2">مسيرته :</h3>
+                        <p>ولد رونالدو في البرازيل عام 1976 وبدأت مسيرته الكروية وبدأ في نادي صغير في البرازيل وبعدها انتقل الي barcelona عام 1993 وبعدها انتقل الي ريال مدريد عام 2002 وحقق مع نادي :</p>
+                        <ul class="list-disc list-inside mr-4 mt-2 text-xeon-lime">
+                            <li>الدوري الاسباني حققه مرتين 2</li>
+                            <li>دوري ابطال اوروبا 2002 سنه</li>
+                            <li>كاس السوبر الاسباني</li>
+                            <li>الكره الذهبيه عام 2002</li>
+                        </ul>
+                        <p class="mt-4">وصار ايقونه من ايقونات النادي ريال مدريد وبعدها انتقل الي دوري ايطالي في عام 2007 الي &lt;ميلان&gt; وحقق معهم دوري ابطال اوروبا 2007 وقدم اداء خرافي رغم زياده وزنه وبعدها رجع الي ناديه قديم في برازيل عام 2009 وحقق معهم كاس برازيل وسدد دينه العاطفي وبعدها اعتزل في نفس النادي 2011 بسبب الصابات تاركا تاريخ وجوائز عديده</p>
+                    </section>
+                    <section>
+                        <h3 class="text-xeon-lime font-bold text-2xl mb-2">جوائزه الفرديه ومع منتخب حقق</h3>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm md:text-base">
+                            <li>✦ الكره الذهبيه عام 1997 و 2002</li>
+                            <li>✦ حقق مع المنتخب كأس العالم مرتان</li>
+                            <li>✦ صار اصغر لاعب يأخذ كاس العالم</li>
+                            <li>✦ الدوري الاسباني حققه مرتين 2</li>
+                            <li>✦ دوري ابطال اوروبا 2002 سنه</li>
+                            <li>✦ كاس السوبر الاسباني</li>
+                            <li>✦ دوري ابطال اوروبا 2007</li>
+                            <li>✦ كاس برازيل</li>
+                        </ul>
+                    </section>
+                    <section class="border-t border-xeon-red pt-4">
+                        <h3 class="text-xeon-red font-bold text-2xl mb-2">العقبات التي واجهها الاسطوره رونالدو</h3>
+                        <ul class="list-square list-inside">
+                            <li>- اصابه بكسر الرباط الصليبي</li>
+                            <li>- ظلم في بوشكاش</li>
+                            <li>- اصيب بمشاكل زياده وزن وضغط نفسي</li>
+                        </ul>
+                    </section>
+                    <section class="border-t border-xeon-lime pt-4 bg-gray-900 p-4 rounded-lg">
+                        <h3 class="text-white font-bold text-2xl mb-2">مسيرته في التدريب:</h3>
+                        <p>فاز على اساطير مثل ميسي و كريستيانو بنتائج مثل 1-10</p>
+                        <p>وفاز مع منتخبه بكأس كوبا امريكا ذهبي 2016 الذي يقام كل مئة سنة🤯</p>
+                        <p>وأنهي مسيرته كمدرب عام 2016 منهيا تاريخا عريقا في التدريب</p>
+                    </section>
+                    <p class="text-center font-black text-3xl text-xeon-lime mt-6">(النهاية)</p>
+                </div>
+            </div>
+
+            <div id="z5" class="hidden-card fade-in bg-xeon-card border-2 border-xeon-cyan p-6 md:p-10 rounded-2xl">
+                <h2 class="text-4xl font-black text-xeon-cyan mb-6">Zinedine Zidane</h2>
+                <div class="space-y-6 text-lg text-gray-200">
+                    <p>مسريته زين الدين زيدان أسطورة كرة القدم الفرنسية والجزائرية الأصل، سطّر مسيرة استثنائية كلاعب ومدرب. تألق في بوردو ويوفنتوس وريال مدريد، وقاد فرنسا لكأس العالم 1998 وفاز بالكرة الذهبية في نفس العام وأمم أوروبا 2000. كمدرب، صنع التاريخ مع ريال مدريد بـ 3 ألقاب متتالية في دوري أبطال أوروبا، محققاً 11 لقباً في فترتين.</p>
+                    <h3 class="text-xeon-cyan font-bold text-xl">أبرز محطات مسيرة اللاعب (زيزو):</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>البدايات (1988–1996): بدأ في كان (Cannes) ثم انتقل إلى بوردو الفرنسي.</li>
+                        <li>يوفنتوس (1996–2001): حقق لقبين للدوري الإيطالي (سكوديتو)، وفاز بالكرة الذهبية عام 1998.</li>
+                        <li>ريال مدريد (2001–2006): انتقل بصفقة قياسية، وفاز بدوري أبطال أوروبا 2002 بهدفه الشهير.</li>
+                        <li>المنتخب الفرنسي (1994–2006): سجل 31 هدفاً في 108 مباراة. قاد الفريق للفوز بـ كأس العالم 1998 وكأس أمم أوروبا 2000.</li>
+                    </ul>
+                    <h3 class="text-xeon-cyan font-bold text-xl">أبرز محطات مسيرة التدريب:</h3>
+                    <p>الفترة الأولى (2016–2018): حقق إنجازاً تاريخياً بالفوز بـ دوري أبطال أوروبا 3 مرات متتالية (2016، 2017، 2018).</p>
+                    <p>الفترة الثانية (2019–2021): عاد وفاز بالدوري الإسباني مرة أخرى (2019–2020) وكأس السوبر الإسباني.</p>
+                    <p class="font-bold border-l-4 border-xeon-cyan p-4">الجوائز الفردية: الكرة الذهبية (1998)، أفضل لاعب من الفيفا (3 مرات)، وأفضل مدرب في العالم.</p>
+                    <p>ونهى مسيرته ومعه 1كرة ذهبية و1كاس عالم و2 دوري ابطال مع ريال مدريد(كلاعب) وفاز بثلاث دوري ابطال متتالين (كمدرب) وهكذا انتهت مسيرة زين الدين زيدان مخلدا تاريخا عريقا</p>
+                </div>
+            </div>
+
+            <div id="cr7" class="hidden-card fade-in bg-xeon-card border-2 border-xeon-red p-6 md:p-10 rounded-2xl">
+                <h2 class="text-4xl font-black text-xeon-red mb-6">Cristiano Ronaldo</h2>
+                <div class="space-y-6 text-lg text-gray-200">
+                    <p>كريستيانو رونالدو (ولد 1985) أسطورة كرة قدم برتغالية، يُعد من أعظم هدافي التاريخ بـ 33 بطولة مع الأندية (مانشستر يونايتد، ريال مدريد، يوفنتوس، النصر) و5 كرات ذهبية.</p>
+                    <ul class="space-y-4">
+                        <li><span class="text-xeon-red font-bold">سبورتينغ لشبونة:</span> البداية الاحترافية.</li>
+                        <li><span class="text-xeon-red font-bold">مانشستر يونايتد:</span> تحول إلى نجم عالمي وفاز بأول كرة ذهبية ودوري أبطال (2008).</li>
+                        <li><span class="text-xeon-red font-bold">ريال مدريد (2009-2018):</span> الهداف التاريخي للنادي بـ 450 هدفاً، و 4 ألقاب دوري أبطال أوروبا.</li>
+                        <li><span class="text-xeon-red font-bold">يوفنتوس:</span> فاز بلقبين للدوري الإيطالي.</li>
+                        <li><span class="text-xeon-red font-bold">النصر السعودي (2023-الآن):</span> مستمر في تحطيم الأرقام القياسية.</li>
+                    </ul>
+                    <div class="bg-red-950/30 p-4 rounded border border-xeon-red">
+                        <p>الإنجازات الكبرى: الكرة الذهبية 5 مرات، دوري أبطال أوروبا 5 مرات، يورو 2016 ودوري الأمم 2019.</p>
+                    </div>
+                    <p class="text-center font-black text-2xl text-xeon-red">وهكذا انتهت مسيرة ال GOAT🐐 المظلوم بدون كأس عالم</p>
+                </div>
+            </div>
+
+            <div id="njr" class="hidden-card fade-in bg-xeon-card border-2 border-xeon-magenta p-6 md:p-10 rounded-2xl">
+                <h2 class="text-4xl font-black text-xeon-magenta mb-6">Neymar Jr</h2>
+                <div class="space-y-6 text-lg text-gray-200">
+                    <p>تُعتبر مسيرة البرازيلي نيمار واحدة من أكثر المسيرات إثارة للجدل والموهبة، جمعت بين المهارة الاستثنائية، الأرقام القياسية، والانتقالات المدوية.</p>
+                    <p><span class="text-xeon-magenta font-bold">1. سانتوس (2009-2013):</span> قادهم للقب كأس ليبرتادوريس 2011 وسجل 136 هدفاً.</p>
+                    <p><span class="text-xeon-magenta font-bold">2. برشلونة (2013-2017):</span> ثلاثية MSN التاريخية، حقق "الثلاثية" في 2015 وكان بطل الريمونتادا الشهيرة ضد باريس.</p>
+                    <p><span class="text-xeon-magenta font-bold">3. باريس سان جيرمان (2017-2023):</span> الصفقة الأغلى في التاريخ (222 مليون يورو)، وصل لنهائي الأبطال 2020 لكن عانى من إصابات متكررة.</p>
+                    <p><span class="text-xeon-magenta font-bold">4. الهلال السعودي (2023-الآن):</span> تعرض لإصابة صدمة بقطع في الرباط الصليبي بعد بدايته بوقت قصير.</p>
+                    <p><span class="text-xeon-magenta font-bold">5. المنتخب:</span> الهداف التاريخي للبرازيل متخطياً بيليه، فاز بكأس القارات 2013 وذهبية أولمبياد ريو 2016.</p>
+                </div>
+            </div>
+
+            <div id="t10" class="hidden-card fade-in bg-xeon-card border-2 border-xeon-silver p-6 md:p-10 rounded-2xl">
+                <h2 class="text-4xl font-black text-white mb-6 underline">محمد أبو تريكة (الماجيكو)</h2>
+                <div class="space-y-4 text-lg text-gray-200">
+                    <p>بدأ في الترسانة ثم انتقل لـ الأهلي عام 2003، محققاً 24 بطولة مع المارد الأحمر (7 دوري، 5 أفريقية، برونزية العالم 2006)، ولقبين كأس أمم أفريقيا مع المنتخب.</p>
+                    <ul class="space-y-2">
+                        <li>- <span class="font-bold">العصر الذهبي:</span> أيقونة الأهلي، فاز بـ 7 دوري مصري و 5 دوري أبطال أفريقيا.</li>
+                        <li>- <span class="font-bold">العالمية:</span> برونزية كأس العالم للأندية 2006 وهداف البطولة.</li>
+                        <li>- <span class="font-bold">الاحتراف:</span> قاد بني ياس الإماراتي للقب كأس الخليج للأندية.</li>
+                        <li>- <span class="font-bold">الاعتزال:</span> ديسمبر 2013 بعد الفوز بدوري أبطال أفريقيا.</li>
+                    </ul>
+                    <div class="bg-gray-800 p-4 rounded text-sm italic">
+                        أفضل لاعب داخل أفريقيا 4 مرات، الهداف التاريخي للديربي بـ 13 هدفاً، ومن أساطير الفيفا.
+                    </div>
+                    <p class="text-center font-bold text-xeon-cyan border-t pt-4">وهكذا انتهت مسيرة الماجيكو مخلدا اسما عظيم جدا في قلوب العرب وهو واحد من الناس التي نعتز بها كمصريين وعرب</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function openCard(id) {
+            // إخفاء كل الكروت أولاً
+            const cards = document.querySelectorAll('.hidden-card');
+            cards.forEach(card => card.style.display = 'none');
+            
+            // إظهار الكارت المطلوب
+            const target = document.getElementById(id);
+            target.style.display = 'block';
+            
+            // سكرول ناعم للكارت
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    </script>
+</body>
+</html>
